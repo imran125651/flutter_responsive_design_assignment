@@ -22,6 +22,7 @@ class NavMenu extends StatelessWidget {
                 child: const Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+
                     Text("SKILL UP NOW", style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),),
                     Text("TAP HERE", style: TextStyle(color: Colors.white,fontSize: 14),),
                   ],
