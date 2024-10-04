@@ -1,16 +1,16 @@
 # flutter_responsive_design_assignment
 
-A new Flutter project.
 
-## Getting Started
+Mobile UI:
 
-This project is a starting point for a Flutter application.
+![Screenshot 2024-09-01 210102](https://github.com/user-attachments/assets/ea049120-df09-49e8-a819-5a8e7507fc06)
 
-A few resources to get you started if this is your first Flutter project:
+![Screenshot 2024-09-01 210111](https://github.com/user-attachments/assets/a288dcde-29af-4625-88af-e9863d68a546)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Tablet UI:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot 2024-09-01 210120](https://github.com/user-attachments/assets/92710698-54c5-48b9-a21e-ac5030af93f8)
+
+Desktop UI:
+
+![Screenshot 2024-09-01 210138](https://github.com/user-attachments/assets/2780d7f4-519c-4735-a9e9-0f4faf2c39de)
