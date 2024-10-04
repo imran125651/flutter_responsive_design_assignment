@@ -5,6 +5,7 @@ import 'package:flutter_responsive_design_assignment/widgets/text_content.dart';
 import '../main.dart';
 import '../utils/screen_utils.dart';
 import '../widgets/nav_menu.dart';
+import '../widgets/online_product_with_api.dart';
 import '../widgets/responsive_layout.dart';
 
 
@@ -14,39 +15,39 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ResponsiveLayout(
-      mobile: _mobileLayoutBuilder(),
-      tablet: _tabletLayoutBuilder(),
-      desktop: _desktopLayoutBuilder(),
+      mobile: _mobileLayoutBuilder(context),
+      tablet: _tabletLayoutBuilder(context),
+      desktop: _desktopLayoutBuilder(context),
     );
   }
 
-  Widget _mobileLayoutBuilder(){
+  Widget _mobileLayoutBuilder(context){
     return Scaffold(
-      appBar: _appBarBuilder(),
+      appBar: _appBarBuilder(context),
       drawer: const NavMenu(),
       body: _body(),
     );
   }
 
-  Widget _tabletLayoutBuilder(){
+  Widget _tabletLayoutBuilder(context){
     return Scaffold(
-      appBar: _appBarBuilder(),
+      appBar: _appBarBuilder(context),
       body: _body(),
     );
   }
 
-  Widget _desktopLayoutBuilder(){
+  Widget _desktopLayoutBuilder(context){
     return Scaffold(
-      appBar: _appBarBuilder(),
+      appBar: _appBarBuilder(context),
       body: _body(),
     );
   }
 
-  AppBar _appBarBuilder(){
+  AppBar _appBarBuilder(BuildContext context){
     DeviceType deviceType = ScreenUtils.getDeviceType(deviceWidth: size.width);
     if(deviceType == DeviceType.mobile){
       return AppBar(
-        actions: [
+        actions: const [
           Padding(
             padding: EdgeInsets.only(top: 20,right: 50),
             child: Text("HUMMING\nBIRD .", style: TextStyle(fontWeight: FontWeight.bold),),
@@ -58,13 +59,22 @@ class HomeScreen extends StatelessWidget {
       return AppBar(
         automaticallyImplyLeading: false,
         leadingWidth: 150,
-        leading: Padding(
+        leading: const Padding(
           padding: EdgeInsets.only(left: 50, top: 15),
           child: Text("HUMMING\nBIRD .", style: TextStyle(fontWeight: FontWeight.bold),),
         ),
         actions: [
-          Text("Episodes"),
-          Padding(
+          TextButton(
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const OnlineProductWithAPI()));
+              },
+              child: const Text("API Data")
+          ),
+
+          const SizedBox(width: 10),
+          const Text("Episodes"),
+
+          const Padding(
             padding: EdgeInsets.only(left: 50, right: 100),
             child: Text("About"),
           ),

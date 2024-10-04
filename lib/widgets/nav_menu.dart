@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_responsive_design_assignment/widgets/online_product_with_api.dart';
 
 class NavMenu extends StatelessWidget {
   const NavMenu({
@@ -63,6 +64,22 @@ class NavMenu extends StatelessWidget {
               ),
 
 
+              const SizedBox(height: 20),
+              ListTile(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const OnlineProductWithAPI()));
+                },
+                title: const Padding(
+                  padding: EdgeInsets.only(left: 20),
+                  child: Row(
+                    children: [
+                      Icon(Icons.comment_bank),
+                      SizedBox(width: 20,),
+                      Text("API Data")
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),

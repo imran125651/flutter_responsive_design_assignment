@@ -11,7 +11,7 @@ class JoinCourseButton extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
-          padding: EdgeInsets.all(25),
+          padding: const EdgeInsets.all(25),
           width: buttonWidth,
           child: TextButton(
             style: const ButtonStyle(
